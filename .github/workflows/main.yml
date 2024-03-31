@@ -30,3 +30,18 @@ jobs:
   with:
     name: my-app
     path: path/to/your/artifact
+  - name: Install Docker
+  uses: docker/setup-buildx-action@v1
+  with:
+    install: true
+
+- name: Docker Build
+  run: |
+    docker build -t my-app:latest .
+    on:
+  push:
+    branches:
+      - main
+      - feature/**
+
+
