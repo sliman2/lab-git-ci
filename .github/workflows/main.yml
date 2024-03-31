@@ -25,3 +25,8 @@ jobs:
   with:
     files: target/**/*.xml
 
+- name: Upload a Build Artifact
+  uses: actions/upload-artifact@v2
+  with:
+    name: my-app
+    path: path/to/your/artifact
