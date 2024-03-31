@@ -1,0 +1,5 @@
+git log
+
+git add 1.4
+git commit -m "Add git log command to 1.4"
+
